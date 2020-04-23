@@ -20,7 +20,16 @@ button {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  width: 100%; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+a:hover, a:focus {
+  color: #ff52bf;
+  cursor: pointer; }
 
 img {
   max-width: 300px;
@@ -33,10 +42,18 @@ button {
   border-radius: 30px;
   box-shadow: 0px 3px 5px 3px rgba(128, 141, 153, 0.2); }
 
+.get-started {
+  background-color: #ff52bf;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 1em;
+  padding: 1em 5em; }
+  .get-started:hover, .get-started:active {
+    background-color: #ff85d2; }
+
 header {
   background-color: #ebfbff;
-  background-image: url(../images/bg-hero-mobile.svg);
-  padding-bottom: 0.5em; }
+  background-image: url(../images/bg-hero-mobile.svg); }
   @media (min-width: 375px) {
     header {
       background-image: url(../images/bg-hero-desktop.svg); } }
@@ -55,6 +72,9 @@ header {
       padding: 5px 20px;
       border-radius: 30px;
       box-shadow: 0px 3px 5px 3px rgba(128, 141, 153, 0.2); }
+      header .header-top button.try-it:hover, header .header-top button.try-it:active {
+        background-color: #ff52bf;
+        color: #fff; }
   header .header-text {
     text-align: center;
     padding: 2em; }
@@ -69,14 +89,121 @@ header {
       font-family: "Open Sans", sans-serif;
       line-height: 1.5;
       padding: 1.25em; }
-    header .header-text button.get-started {
-      background-color: #ff52bf;
-      color: #fff;
-      font-size: 12px;
-      margin-top: 1em;
-      padding: 1em 5em; }
   header .header-image-container {
     text-align: center;
-    margin: 1em auto; }
+    margin: 0.5em auto;
+    padding: 2em; }
     header .header-image-container img {
-      max-width: 300px; }
+      max-width: 100%; }
+
+main {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  main section {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(128, 141, 153, 0.1);
+    padding: 2em;
+    margin: 1.3em 0;
+    text-align: center; }
+    main section:first-of-type {
+      margin-top: 1em; }
+    main section img {
+      margin: 0 auto;
+      max-width: 100%; }
+    main section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #00252e;
+      font-family: "Poppins", sans-serif;
+      margin: 2em 0 1em 0; }
+    main section p {
+      font-size: 13px;
+      color: #808d99;
+      line-height: 1.5; }
+
+.ready {
+  padding: 1em;
+  width: 100%;
+  transform: translateY(80px);
+  margin-bottom: 2em; }
+  .ready div {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(128, 141, 153, 0.1);
+    padding: 2.5em 2em;
+    width: 100%;
+    margin: 0 auto; }
+    .ready div h3 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center; }
+    .ready div button.get-started {
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
+
+div.footer {
+  background-color: #00252e;
+  color: #fff;
+  padding: 6em 1em;
+  padding-bottom: 0; }
+  div.footer .col-1 .white-logo {
+    filter: brightness(0%) invert(100%);
+    max-width: 140px;
+    margin-bottom: 1em; }
+  div.footer .col-1 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 1em 0;
+    margin-right: 2em; }
+    div.footer .col-1 div .icon-contact {
+      margin-right: 1em;
+      font-size: 16px; }
+  div.footer .col-1 p {
+    font-size: 14px;
+    font-weight: 300; }
+  div.footer nav.col-2 li {
+    margin-bottom: 1em; }
+  div.footer nav.col-2 #about-us {
+    margin-top: 3em; }
+  div.footer .col-3 {
+    text-align: center; }
+    div.footer .col-3 #copyright {
+      font-size: 10px;
+      font-weight: 300;
+      margin-top: 1.5em; }
+    div.footer .col-3 .icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      div.footer .col-3 .icon-container p {
+        border: #fff 1px solid;
+        border-radius: 50px;
+        font-size: 15px;
+        margin: 0.5em;
+        padding: 5px 8px; }
+        div.footer .col-3 .icon-container p#icon-fb {
+          padding: 5px 11px; }
+        div.footer .col-3 .icon-container p i {
+          height: 10px; }
+        div.footer .col-3 .icon-container p:hover, div.footer .col-3 .icon-container p:active {
+          cursor: pointer;
+          border: #ff52bf 1px solid; }
+          div.footer .col-3 .icon-container p:hover a, div.footer .col-3 .icon-container p:active a {
+            color: #ff52bf; }
+
+footer {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  color: #808d99; }
+  footer a {
+    color: #ff52bf;
+    text-decoration: none; }
+    footer a:hover, footer a:active {
+      color: #fff; }

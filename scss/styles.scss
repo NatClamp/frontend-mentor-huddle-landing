@@ -4,6 +4,17 @@
 body {
   font-family: $body-font;
   font-weight: $body-weight;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: $pink;
+  cursor: pointer;
 }
 
 img {
@@ -17,12 +28,24 @@ button {
   padding: 5px 20px;
   border-radius: 30px;
   box-shadow: 0px 3px 5px 3px rgba($grayishBlue, 0.2);
+
+}
+
+.get-started {
+  background-color: $pink;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 1em;
+  padding: 1em 5em;
+
+  &:hover, &:active {
+    background-color: lighten($pink, 10%)
+  }
 }
 
 header {
   background-color: $veryPaleCyan;
   background-image: url(../images/bg-hero-mobile.svg);
-  padding-bottom: 0.5em;
 
   @media (min-width: $mobile) {
     background-image: url(../images/bg-hero-desktop.svg);
@@ -44,6 +67,11 @@ header {
       padding: 5px 20px;
       border-radius: 30px;
       box-shadow: 0px 3px 5px 3px rgba($grayishBlue, 0.2);
+
+      &:hover, &:active {
+        background-color: $pink;
+        color: #fff;
+      }
     }
   }
 
@@ -56,7 +84,6 @@ header {
       font-weight: $heading-weight;
       font-size: 24px;
       padding-top: 1em;
-      // padding-bottom: 1em;
     }
 
     p {
@@ -66,21 +93,185 @@ header {
       line-height: 1.5;
       padding: 1.25em;
     }
-
-    button.get-started {
-      background-color: $pink;
-      color: #fff;
-      font-size: 12px;
-      margin-top: 1em;
-      padding: 1em 5em;
-    }
   }
 
   .header-image-container {
     text-align: center;
-    margin: 1em auto;
+    margin: 0.5em auto;
+    padding: 2em;
     img {
-      max-width: 300px;
+      max-width: 100%;
+    }
+  }
+}
+
+main {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  section {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba($grayishBlue, 0.1);
+    padding: 2em;
+    margin: 1.3em 0;
+    text-align: center;
+
+    &:first-of-type {
+      margin-top: 1em;
+    }
+
+    img {
+      margin: 0 auto;
+      max-width: 100%
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: $heading-weight;
+      color: $veryDarkCyan;
+      font-family: $heading-font;
+      margin: 2em 0 1em 0;
+    }
+
+    p {
+      font-size: 13px;
+      color: $grayishBlue;
+      line-height: 1.5;
+    }
+  }
+}
+
+.ready {
+  padding: 1em;
+  width: 100%;
+  transform: translateY(80px);
+  margin-bottom: 2em;
+  
+  div {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba($grayishBlue, 0.1);
+    padding: 2.5em 2em;
+    width: 100%;
+    margin: 0 auto;
+
+
+    h3 {
+      font-family: $heading-font;
+      font-weight: $heading-weight;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button.get-started {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+  }
+}
+
+div.footer {
+  background-color: $veryDarkCyan;
+  color: #fff;
+  padding: 6em 1em;
+  padding-bottom: 0;
+
+  .col-1 {
+    .white-logo {
+      filter: brightness(0%) invert(100%);
+      max-width: 140px;
+      margin-bottom: 1em;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      margin: 1em 0;
+      margin-right: 2em;
+
+      .icon-contact {
+        margin-right: 1em;
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      // padding-right: 1.5em;
+    }
+  }
+
+  nav.col-2 {
+    li {
+      margin-bottom: 1em;
+    }
+
+    #about-us {
+      margin-top: 3em;
+    }
+  }
+
+  .col-3 {
+    text-align: center;
+    #copyright {
+      font-size: 10px;
+      font-weight: 300;
+      margin-top: 1.5em;
+    }
+    .icon-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+      p {
+        border: #fff 1px solid;
+        border-radius: 50px;
+        font-size: 15px;
+        margin: 0.5em;
+        padding: 5px 8px;
+
+        &#icon-fb {
+          padding: 5px 11px;
+        }
+
+        i {
+          height: 10px;
+        }
+
+        &:hover, &:active {
+          cursor: pointer;
+          border: $pink 1px solid;
+          a {
+            color: $pink;
+          }
+        }
+      }
+
+
+
+    }
+  }
+}
+
+footer {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  color: $grayishBlue;
+
+  a {
+    color: $pink;
+    text-decoration: none;
+
+    &:hover, &:active {
+      color: #fff;
     }
   }
 }

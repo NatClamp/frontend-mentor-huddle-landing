@@ -10,6 +10,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -27,7 +28,6 @@
     <div class="header-image-container">
       <img src="images/illustration-mockups.svg" alt="mockups illustration">
     </div>
-
   </header>
 
   <main>
@@ -47,40 +47,59 @@
       <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
     </section>
   </main>
+
+
   <section class="ready">
-    <h3>Ready To Build Your Community?</h3>
-    <button class="get-started">Get Started For Free</button>
+    <div>
+      <h3>Ready To Build Your Community?</h3>
+      <button class="get-started">Get Started For Free</button>
+    </div>
   </section>
-  <!--
+
   <div class="footer">
     <div class="col-1">
-      <img src="images/logo.svg" alt="Huddle logo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <p>+1-543-123-4567</p>
-      <p>example@huddle.com</p>
+      <img src="images/logo.svg" class="white-logo" alt="Huddle logo">
+      <div>
+        <p class="icon-contact" id="icon-map"><i class="fas fa-map-marker-alt"></i></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </div>
+      <div>
+        <p class="icon-contact" id="icon-phone"><i class="fas fa-phone-alt"></i></p>
+        <p>+1-543-123-4567</p>
+      </div>
+      <div>
+        <p class="icon-contact" id="icon-email"><i class="fas fa-envelope"></i></p>
+        <p>example@huddle.com</p>
+      </div>
     </div>
-    <nav>
+    <nav class="col-2">
       <ul>
-        <li>About Us</li>
-        <li>What We Do</li>
-        <li>FAQ</li>
+        <li id="about-us"><a href="">About Us</a></li>
+        <li><a href="">What We Do</a></li>
+        <li><a href="">FAQ</a></li>
       </ul>
       <ul>
-        <li>Career</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
+        <li><a href="">Career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Contact Us</a></li>
       </ul>
     </nav>
-    <div class="icon-container"></div>
-    <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
+    <div class="col-3">
+      <div class="icon-container">
+        <p id="icon-fb"><a href=""><i class="fab fa-facebook-f"></i></a></p>
+        <p id="icon-tw"><a href=""><i class="fab fa-twitter"></i></a></p>
+        <p id="icon-in"><a href=""><i class="fab fa-instagram"></i></a></p>
+      </div>
+      <p id="copyright">&copy; Copyright 2018 Huddle. All rights reserved.</p>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.natalieclamp.com">Natalie Clamp</a>.
+      </p>
+    </footer>
   </div>
-  -->
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+
 </body>
 </html>
