@@ -13,12 +13,70 @@
 *::before,
 *::after {
   margin: 0;
-  padding: 0;
-  outline: 0; }
-
-a:active,
-a:hover {
-  outline: 0; }
+  padding: 0; }
 
 button {
   cursor: pointer; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+img {
+  max-width: 300px;
+  object-fit: scale-down; }
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px 3px rgba(128, 141, 153, 0.2); }
+
+header {
+  background-color: #ebfbff;
+  background-image: url(../images/bg-hero-mobile.svg);
+  padding-bottom: 0.5em; }
+  @media (min-width: 375px) {
+    header {
+      background-image: url(../images/bg-hero-desktop.svg); } }
+  header .header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em; }
+    header .header-top img {
+      width: 120px; }
+    header .header-top button.try-it {
+      background-color: #fff;
+      color: #00252e;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 5px 20px;
+      border-radius: 30px;
+      box-shadow: 0px 3px 5px 3px rgba(128, 141, 153, 0.2); }
+  header .header-text {
+    text-align: center;
+    padding: 2em; }
+    header .header-text h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      padding-top: 1em; }
+    header .header-text p {
+      font-weight: 300;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.5;
+      padding: 1.25em; }
+    header .header-text button.get-started {
+      background-color: #ff52bf;
+      color: #fff;
+      font-size: 12px;
+      margin-top: 1em;
+      padding: 1em 5em; }
+  header .header-image-container {
+    text-align: center;
+    margin: 1em auto; }
+    header .header-image-container img {
+      max-width: 300px; }
