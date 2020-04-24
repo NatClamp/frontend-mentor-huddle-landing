@@ -34,9 +34,9 @@ button {
 .get-started {
   background-color: $pink;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 1em;
-  padding: 1em 5em;
+  padding: 1.5em 6em;
 
   &:hover, &:active {
     background-color: lighten($pink, 10%)
@@ -54,9 +54,9 @@ header {
   .header-top {
     display: flex;
     justify-content: space-between;
-    padding: 1.2em;
+    padding: 3em;
     img {
-      width: 120px;
+      width: 200px;
     }
     button.try-it {
       background-color: #fff;
@@ -74,12 +74,13 @@ header {
       }
 
       @media (min-width: $tablet) {
-        padding: 10px 50px;
+        padding: 12px 55px;
+        font-size: 14px;
       }
     }
 
     @media (min-width: $tablet) {
-      padding: 2em 3em 0 3em;
+      padding: 2em 3em;
     }
   }
 
@@ -104,10 +105,10 @@ header {
       font-weight: $heading-weight;
       font-size: 24px;
       padding-top: 1em;
+      color: $veryDarkCyan;
     }
 
     p {
-      font-weight: 300;
       font-size: 15px;
       font-family: $body-font;
       line-height: 1.5;
@@ -121,16 +122,16 @@ header {
 
       h1 {
         font-size: 36px;
+        margin-top: 1em;
         margin-bottom: 1em;
         max-width: 90%;
       }
 
       p {
-        font-size: 17px;
+        font-size: 18px;
         margin: 0;
         margin-bottom: 1em;
         padding: 0;
-        // max-width: 90%;
       }
     }
   }
@@ -156,6 +157,10 @@ main {
   flex-direction: column;
   justify-content: center;
 
+  @media (min-width: $tablet) {
+    padding-top: 9em;
+  }
+
   section {
     background-color: #fff;
     border-radius: 20px;
@@ -167,6 +172,7 @@ main {
     @media (min-width: $tablet) {
       display: flex;
       flex-direction: row-reverse;
+      padding: 4em;
       &:nth-of-type(2) {
         flex-direction: row;
       }
@@ -200,7 +206,7 @@ main {
       margin: 2em 0 1em 0;
 
       @media (min-width: $tablet) {
-        font-size: 24px;
+        font-size: 26px;
         margin: 0;
         margin-bottom: 1em;
       }
@@ -211,7 +217,7 @@ main {
       color: $grayishBlue;
       line-height: 1.5;
       @media (min-width: $tablet) {
-        font-size: 16px;
+        font-size: 18px;
         max-width: 500px;
       }
     }
@@ -233,7 +239,7 @@ main {
     margin: 0 auto;
 
     @media (min-width: $tablet) {
-      width: 40%;
+      width: 60%;
       transform: translateY(120px);
     }
 
@@ -242,8 +248,9 @@ main {
       font-weight: $heading-weight;
       font-size: 16px;
       text-align: center;
+      color: $veryDarkCyan;
       @media (min-width: $tablet) {
-        font-size: 20px;
+        font-size: 26px;
         margin-bottom: 1em;
       }
     }
@@ -343,6 +350,7 @@ div.footer {
       flex-direction: column;
       justify-content: space-between;
       padding-top: 3em;
+      padding-bottom: 1.5em;
     }
     #copyright {
       font-size: 10px;
