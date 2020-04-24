@@ -54,7 +54,7 @@ button {
 header {
   background-color: #ebfbff;
   background-image: url(../images/bg-hero-mobile.svg); }
-  @media (min-width: 375px) {
+  @media (min-width: 768px) {
     header {
       background-image: url(../images/bg-hero-desktop.svg); } }
   header .header-top {
@@ -75,6 +75,20 @@ header {
       header .header-top button.try-it:hover, header .header-top button.try-it:active {
         background-color: #ff52bf;
         color: #fff; }
+      @media (min-width: 768px) {
+        header .header-top button.try-it {
+          padding: 10px 50px; } }
+    @media (min-width: 768px) {
+      header .header-top {
+        padding: 2em 3em 0 3em; } }
+  header .text-image-container {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      header .text-image-container {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 2em; } }
   header .header-text {
     text-align: center;
     padding: 2em; }
@@ -89,12 +103,30 @@ header {
       font-family: "Open Sans", sans-serif;
       line-height: 1.5;
       padding: 1.25em; }
+    @media (min-width: 768px) {
+      header .header-text {
+        max-width: 40%;
+        text-align: left;
+        margin: auto 0; }
+        header .header-text h1 {
+          font-size: 36px;
+          margin-bottom: 1em;
+          max-width: 90%; }
+        header .header-text p {
+          font-size: 17px;
+          margin: 0;
+          margin-bottom: 1em;
+          padding: 0; } }
   header .header-image-container {
     text-align: center;
     margin: 0.5em auto;
-    padding: 2em; }
+    padding: 2em 0; }
     header .header-image-container img {
-      max-width: 100%; }
+      max-width: 80%; }
+    @media (min-width: 768px) {
+      header .header-image-container {
+        max-width: 70%;
+        margin: 0; } }
 
 main {
   padding: 2em;
