@@ -164,13 +164,32 @@ main {
     margin: 1.3em 0;
     text-align: center;
 
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      &:nth-of-type(2) {
+        flex-direction: row;
+      }
+      .image-container {
+        max-width: 50%;
+      }
+      .text-container {
+        text-align: left;
+        margin: auto 0;
+        padding: 0 5em;
+      }
+    }
+
     &:first-of-type {
       margin-top: 1em;
     }
 
     img {
       margin: 0 auto;
-      max-width: 100%
+      max-width: 100%;
+      @media (min-width: $tablet) {
+        max-width: 80%
+      }
     }
 
     h2 {
@@ -179,12 +198,22 @@ main {
       color: $veryDarkCyan;
       font-family: $heading-font;
       margin: 2em 0 1em 0;
+
+      @media (min-width: $tablet) {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 1em;
+      }
     }
 
     p {
       font-size: 13px;
       color: $grayishBlue;
       line-height: 1.5;
+      @media (min-width: $tablet) {
+        font-size: 16px;
+        max-width: 500px;
+      }
     }
   }
 }
@@ -192,23 +221,31 @@ main {
 .ready {
   padding: 1em;
   width: 100%;
-  transform: translateY(80px);
   margin-bottom: 2em;
   
   div {
+    transform: translateY(80px);
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 5px rgba($grayishBlue, 0.1);
+    box-shadow: 0px 4px 8px 1px rgba($grayishBlue, 0.3);
     padding: 2.5em 2em;
     width: 100%;
     margin: 0 auto;
 
+    @media (min-width: $tablet) {
+      width: 40%;
+      transform: translateY(120px);
+    }
 
     h3 {
       font-family: $heading-font;
       font-weight: $heading-weight;
       font-size: 16px;
       text-align: center;
+      @media (min-width: $tablet) {
+        font-size: 20px;
+        margin-bottom: 1em;
+      }
     }
 
     button.get-started {
@@ -216,7 +253,6 @@ main {
       margin-right: auto;
       display: block;
     }
-
   }
 }
 
@@ -226,11 +262,33 @@ div.footer {
   padding: 6em 1em;
   padding-bottom: 0;
 
+  @media (min-width: $tablet) {
+    padding: 9em 6em 3em 6em;
+  }
+
+  @media (min-width: $tablet) {
+    .design-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .col-1, .col-2, .col-3 {
+        max-width: 33%;
+      }
+    } 
+  }
+
   .col-1 {
+    @media (min-width: $tablet ) {
+      padding-right: 3em;
+    }
     .white-logo {
       filter: brightness(0%) invert(100%);
       max-width: 140px;
       margin-bottom: 1em;
+      @media (min-width: $tablet) {
+        max-width: 200px;        
+      }
     }
 
     div {
@@ -239,6 +297,10 @@ div.footer {
       justify-content: start;
       margin: 1em 0;
       margin-right: 2em;
+
+      @media (min-width: $tablet) {
+        margin: 1em;
+      }
 
       .icon-contact {
         margin-right: 1em;
@@ -249,22 +311,39 @@ div.footer {
     p {
       font-size: 14px;
       font-weight: 300;
-      // padding-right: 1.5em;
     }
   }
 
   nav.col-2 {
+    @media (min-width: $tablet) {
+      min-width: 27%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-top: 2em;
+    }
     li {
       margin-bottom: 1em;
     }
 
-    #about-us {
-      margin-top: 3em;
+    
+      @media (max-width: $tablet) {
+        #about-us {
+          margin-top: 3em;
+      }
     }
   }
 
   .col-3 {
     text-align: center;
+    @media (min-width: $tablet) {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 3em;
+    }
     #copyright {
       font-size: 10px;
       font-weight: 300;
@@ -274,6 +353,9 @@ div.footer {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      @media (min-width: $tablet) {
+        justify-content: flex-start;
+      }
       
       p {
         border: #fff 1px solid;
@@ -298,16 +380,14 @@ div.footer {
           }
         }
       }
-
-
-
     }
   }
 }
 
 footer {
   padding: 2em;
-  margin: 0 auto;
+  padding-bottom: 0;
+  margin: 2em auto;
   text-align: center;
   color: $grayishBlue;
 
